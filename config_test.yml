@@ -1,0 +1,18 @@
+server:
+  port: test
+spring:
+  application:
+    name: cloud-config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri:  git@github.com:niejign26/springcloud-config.git
+          search-paths:
+            - springcloud-config
+      label: master
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:7001/eureka
+
